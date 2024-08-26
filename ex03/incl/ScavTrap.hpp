@@ -6,7 +6,7 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 12:10:28 by okrahl            #+#    #+#             */
-/*   Updated: 2024/08/20 14:04:19 by okrahl           ###   ########.fr       */
+/*   Updated: 2024/08/26 13:55:19 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,12 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap // Diese Zeile implementiert die Vererbung
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap(const std::string &Name);
-
-		~ScavTrap();
-
+		virtual ~ScavTrap();
 		ScavTrap(const ScavTrap &copy);
-
 		ScavTrap &operator=(const ScavTrap &copy);
 
 		void guardGate();

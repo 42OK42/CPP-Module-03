@@ -6,19 +6,11 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 14:02:52 by okrahl            #+#    #+#             */
-/*   Updated: 2024/08/26 13:55:55 by okrahl           ###   ########.fr       */
+/*   Updated: 2024/08/26 13:56:09 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ScavTrap.hpp"
-
-ScavTrap::ScavTrap() : ClapTrap()
-{
-	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
-	std::cout << "ScavTrap " << this->_name << " is created" << std::endl;
-}
 
 ScavTrap::ScavTrap(const std::string &Name) : ClapTrap(Name)
 {

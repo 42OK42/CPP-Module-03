@@ -6,7 +6,7 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 14:15:52 by okrahl            #+#    #+#             */
-/*   Updated: 2024/08/20 12:38:41 by okrahl           ###   ########.fr       */
+/*   Updated: 2024/08/26 13:52:40 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,26 @@
 
 class ClapTrap
 {
-private:
-	std::string	_name;
-	int			_hitPoints;
-	int			_energyPoints;
-	int			_attackDamage;
+	private:
 
-public:
-	// Constructors
-	ClapTrap(const std::string &Name);
+		std::string	_name;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
 
-	// Destructor
-	~ClapTrap();
+	public:
 
-	// Copy constructor
-	ClapTrap(const ClapTrap &copy);
+		ClapTrap();
+		ClapTrap(const std::string &Name);
+		~ClapTrap();
+		ClapTrap(const ClapTrap &copy);
+		ClapTrap &operator=(const ClapTrap &copy);
 
-	// Copy assignment operator
-	ClapTrap &operator=(const ClapTrap &copy);
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 
-	// Member functions
-	void attack(const std::string& target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-
-	void showData()const;
+		void showData()const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 14:02:52 by okrahl            #+#    #+#             */
-/*   Updated: 2024/08/20 14:14:01 by okrahl           ###   ########.fr       */
+/*   Updated: 2024/08/26 13:55:38 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &copy)
 {
 	std::cout << "ScavTrap Copy Assignment Operator called" << std::endl;
 	if (this != &copy)
-		ClapTrap::operator=(copy);  // Kopierzuweisungsoperator der Basisklasse wird aufgerufen
+		ClapTrap::operator=(copy);
 	return (*this);
 }
 

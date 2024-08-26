@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 12:10:28 by okrahl            #+#    #+#             */
-/*   Updated: 2024/08/26 13:55:03 by okrahl           ###   ########.fr       */
+/*   Created: 2024/08/16 14:15:52 by okrahl            #+#    #+#             */
+/*   Updated: 2024/08/26 13:53:56 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-#define DIAMONDTRAP_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include <iostream>
+#include <cmath>
 
-class DiamondTrap : public ScavTrap, public FragTrap
+class ClapTrap
 {
-	private:
+	protected:
 
 		std::string	_name;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
 
 	public:
 
-		DiamondTrap();
-		DiamondTrap(const std::string &Name);
-		~DiamondTrap();
-		DiamondTrap(const DiamondTrap &copy);
-		DiamondTrap &operator=(const DiamondTrap &copy);
+		ClapTrap();
+		ClapTrap(const std::string &Name);
+		virtual ~ClapTrap();
+		ClapTrap(const ClapTrap &copy);
+		ClapTrap &operator=(const ClapTrap &copy);
 
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		void whoAmI();
 
 		void showData()const;
 };

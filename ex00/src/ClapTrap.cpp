@@ -6,11 +6,20 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 14:22:43 by okrahl            #+#    #+#             */
-/*   Updated: 2024/08/20 14:01:49 by okrahl           ###   ########.fr       */
+/*   Updated: 2024/08/26 13:41:07 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/ClapTrap.hpp"
+
+ClapTrap::ClapTrap()
+{
+	this->_name = "default";
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attackDamage = 0;
+	std::cout << "ClapTrap " << this->_name << " is created" << std::endl;
+}
 
 ClapTrap::ClapTrap(const std::string &Name)
 {
@@ -68,6 +77,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	if (this->_energyPoints > 0)
 	{
 		this->_hitPoints += amount;
+		this->_energyPoints--;
 		if (this->_hitPoints > 10)
 			this->_hitPoints = 10;
 		std::cout << "ClapTrap " << this->_name << " is repaired for " << amount << " points!" << std::endl;

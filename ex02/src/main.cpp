@@ -6,11 +6,11 @@
 /*   By: okrahl <okrahl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/16 14:38:39 by okrahl            #+#    #+#             */
-/*   Updated: 2024/08/20 18:59:38 by okrahl           ###   ########.fr       */
+/*   Updated: 2024/08/20 19:03:59 by okrahl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../incl/ScavTrap.hpp"
+#include "../incl/FragTrap.hpp"
 
 int main()
 {
@@ -20,22 +20,22 @@ int main()
 
 	std::cout << "-----------------------------" << std::endl;
 
-	ScavTrap scav("Scavvy");
-	scav.showData();
-	scav.attack("target");
-	scav.showData();
-	scav.guardGate();
+	FragTrap frag("Fraggy");
+	frag.showData();
+	frag.attack("target");
+	frag.showData();
+	frag.highFivesGuys();
 
 	std::cout << "-----------------------------" << std::endl;
 
-	ScavTrap scavCopy(scav);
-	scavCopy.showData();
+	FragTrap fragCopy(frag);
+	fragCopy.showData();
 
 	std::cout << "-----------------------------" << std::endl;
 
-	ScavTrap scavAssign("AnotherScav");
-	scavAssign = scav;
-	scavAssign.showData();
+	FragTrap fragAssign("AnotherFrag");
+	fragAssign = frag;
+	fragAssign.showData();
 
 	return 0;
 }
